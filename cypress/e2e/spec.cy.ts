@@ -1,5 +1,6 @@
 describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+  it('visits the base url', () => {
+    cy.visit('/')
+    cy.contains('h2', 'hello world')
   })
 })
