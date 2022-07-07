@@ -5,8 +5,6 @@ import { ALL_COUNTRIES, UK_AND_CHANNEL_ISLES } from '@comicrelief/country-lists'
 
 export default function Index() {
 
-  console.log("UK list", ALL_COUNTRIES.getSelectItems())
-
   return (
     <ThemeProvider theme={crTheme}>
       <Container>
