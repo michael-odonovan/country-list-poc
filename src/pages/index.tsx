@@ -1,7 +1,16 @@
-import React from 'react'
-import { ThemeProvider, crTheme, Input, Label, Select } from '@comicrelief/component-library'
+import * as React from 'react'
 import Container from '../components/Container'
 import { ALL_COUNTRIES, UK_AND_CHANNEL_ISLES } from '@comicrelief/country-lists'
+import { 
+  ThemeProvider, 
+  crTheme, 
+  Input, 
+  Label, 
+  Select,
+  ButtonWithStates,
+  Banner,
+  Logo,
+} from '@comicrelief/component-library'
 
 export default function Index() {
 

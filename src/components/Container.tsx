@@ -1,4 +1,5 @@
 import React from 'react'
+import { Interface } from 'readline';
 import styled from 'styled-components'
 
 const StyledContainer = styled.div`
@@ -7,8 +8,11 @@ const StyledContainer = styled.div`
   margin: 100px auto;
 `;
 
+interface Props {
+  children: React.ReactNode
+}
 
-export default function Container({ children }) {
+export default function Container({ children }: Props) {
   return (
     <StyledContainer>
       {children}
