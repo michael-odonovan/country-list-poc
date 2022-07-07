@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Container from '../components/Container'
 import { ALL_COUNTRIES, UK_AND_CHANNEL_ISLES } from '@comicrelief/country-lists'
+import { fields } from '../helpers/fields'
 import { 
   ThemeProvider, 
   crTheme, 
@@ -10,39 +11,41 @@ import {
   ButtonWithStates,
   Banner,
   Logo,
+  // @ts-ignore
 } from '@comicrelief/component-library'
 
 export default function Index() {
+
+  console.log(fields)
 
   return (
     <ThemeProvider theme={crTheme}>
       <Container>
 
-        <h2>CR country list</h2>
+        <Logo/>
 
-        <Label label="name">
-          <Input name="name"/>
-        </Label>
-
-        <Label label="address">
-          <Input name="address"/>
-        </Label>
+        {fields.map(field => 
+          <Label label={field.label}>
+            <Input name={field.name}/>
+          </Label>
+        )}
 
         <Select
-          label="country"
-          errorMsg="This is an error message"
-          description="Please choose your country"
-          greyDescription
-          options={ ALL_COUNTRIES.getSelectItems() }
-        />
-        <Select
-          label="country"
+          label="Are you from the UK?"
           errorMsg="This is an error message"
           description="Please choose your country"
           greyDescription
           options={ UK_AND_CHANNEL_ISLES.getSelectItems() }
         />
+        <Select
+          label="Are you from somewhere else in the world?"
+          errorMsg="This is an error message"
+          description="Please choose your country"
+          greyDescription
+          options={ ALL_COUNTRIES.getSelectItems() }
+        />
 
+        <ButtonWithStates>Submit</ButtonWithStates>
 
       </Container>
     </ThemeProvider>
