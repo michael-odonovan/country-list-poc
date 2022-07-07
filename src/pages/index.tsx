@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider, crTheme, Input, Label, Select } from '@comicrelief/component-library'
 import Container from '../components/Container'
-import { ALL_COUNTRIES } from '@comicrelief/country-lists'
+import { ALL_COUNTRIES, UK_AND_CHANNEL_ISLES } from '@comicrelief/country-lists'
 
 export default function Index() {
 
@@ -28,6 +28,14 @@ export default function Index() {
           greyDescription
           options={ ALL_COUNTRIES.getSelectItems() }
         />
+        <Select
+          label="country"
+          errorMsg="This is an error message"
+          description="Please choose your country"
+          greyDescription
+          options={ UK_AND_CHANNEL_ISLES.getSelectItems() }
+        />
+
 
       </Container>
     </ThemeProvider>
