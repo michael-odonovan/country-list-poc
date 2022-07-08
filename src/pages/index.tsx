@@ -22,11 +22,13 @@ export default function Index() {
     <ThemeProvider theme={crTheme}>
       <Container>
 
+        <Banner backgroundColor="white">Here comes a form!</Banner>
+
         <Logo/>
 
         {fields.map(field => 
           <Label label={field.label}>
-            <Input name={field.name}/>
+            <Input name={field.name} type={field.type} defaultValue={field.defaultValue}/>
           </Label>
         )}
 
