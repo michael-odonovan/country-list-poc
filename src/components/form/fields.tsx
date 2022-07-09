@@ -1,6 +1,6 @@
 interface Fields {
-  name: string;
   label: string;
+  name: string;
   type: React.HTMLInputTypeAttribute;
   defaultValue?: string;
 }
@@ -17,6 +17,11 @@ export const fields: Fields[] = [
     name: "secondName",
     type: "text",
     defaultValue: "Hula",
+  },
+  {
+    label: "email",
+    name: "email",
+    type: "email",
   },
   {
     label: "address line 1",
