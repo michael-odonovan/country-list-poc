@@ -41,7 +41,7 @@ export default function Form() {
         <form onSubmit={handleSubmit(onSubmit)}>
 
           {fields.map((field) => (
-            <>
+            <div key={field.name}>
               <Input 
                 id={field.name} 
                 type={field.type} 
@@ -49,7 +49,7 @@ export default function Form() {
                 label={field.label}
                 {...register(field.name, { required: true })}
               />
-            </>
+            </div>
           ))}
 
           <Select
