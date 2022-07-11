@@ -4,7 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { ALL_COUNTRIES, UK_AND_CHANNEL_ISLES } from '@comicrelief/country-lists';
 import { fields } from './fields';
 import { validationSchema } from './validationSchema'
-import Container from '../Container';
+import Container from '../../styles/Container';
+import Form from '../../styles/Form';
 import { 
   ThemeProvider, 
   crTheme, 
@@ -38,7 +39,7 @@ export default function Form() {
   return (
     <ThemeProvider theme={crTheme}>
       <Container>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <Form onSubmit={handleSubmit(onSubmit)}>
 
           {fields.map((field) => (
             <div key={field.name}>
@@ -71,7 +72,7 @@ export default function Form() {
 
           <ButtonWithStates>Submit</ButtonWithStates>
 
-        </form>
+        </Form>
       </Container>
     </ThemeProvider>
   )
